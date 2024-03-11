@@ -343,7 +343,6 @@ class OneDiffSpeedUp_Node_Zho:
     def one_diff_speed(self, pipe):
         if device == "cpu":
             raise ValueError("Only GPU is supported for speed up.")
-        self.check_status()
         from onediffx import compile_pipe
         pipe = compile_pipe(pipe)
         return [pipe]
